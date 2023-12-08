@@ -5,6 +5,9 @@ let options = document.querySelectorAll(".option");
 const msg = document.querySelector(".msg");
 const userScorePara = document.querySelector(".userScorePara");
 const computerScorePara = document.querySelector(".computerScorePara");
+const displayUserOption = document.querySelector(".displayUserOption");
+const displayComputerOption = document.querySelector(".displayComputerOption");
+
 
 
 const drawGame = ()=>{
@@ -37,6 +40,8 @@ const gameBegin = (userOption,computerOption) =>{
     console.log("user select", userOption)
     console.log("computer select" ,computerOption) 
 
+    displayComputerOption.innerText = "Computer selected " + computerOption;
+    displayUserOption.innerText = "User selected " + userOption
 
     if(userOption==computerOption){
         drawGame();
